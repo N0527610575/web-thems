@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; width: 250px; padding: 16px; margin: 0; background: #f8fafc; color: #1e293b; direction: rtl; }
+    h2 { font-size: 16px; margin: 0 0 6px 0; color: #0f172a; display: flex; align-items: center; gap: 6px; }
+    .status { display: inline-block; background: #dcfce7; color: #15803d; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 10px; margin-bottom: 12px; }
+    p { font-size: 12px; color: #64748b; margin-bottom: 14px; line-height: 1.5; }
+    .box { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px; margin-bottom: 12px; font-size: 11px; }
+    button { width: 100%; padding: 10px; background: #2563eb; color: #fff; border: none; border-radius: 8px; font-size: 13px; font-weight: bold; cursor: pointer; transition: background 0.2s; }
+    button:hover { background: #1d4ed8; }
+  </style>
+</head>
+<body>
+  <h2>🌐 מתרגם מקלדת</h2>
+  <span class="status">● פעיל בזמן אמת</span>
+  <p>הקלידו בכל שדה באתרי אינטרנט. כשתהיה שגיאת הקלדה, תקפוץ מעליכם בועת זכוכית שקופה לאישור מהיר!</p>
+  <div class="box">
+    💡 <strong>טיפ:</strong> אפשר לאשר הצעות מיד בלחיצה על מקש <b>Tab</b> במקלדת, או ללחוץ על הכפתור הכחול הצף בשדה להמרה מלאה.
+  </div>
+  <button id="trigger-btn">✨ תרגם עכשיו את השדה הפעיל</button>
+  <script src="popup.js"></script>
+</body>
+</html>

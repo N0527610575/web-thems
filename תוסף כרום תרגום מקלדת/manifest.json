@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "מתרגם מקלדת חכם",
+  "version": "2.1.1",
+  "description": "מתקן הקלדה שגויה בזמן אמת.",
+  "permissions": ["activeTab",  "storage"],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "all_frames": true,
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
