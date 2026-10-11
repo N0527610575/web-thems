@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
   "name": "מתרגם מקלדת חכם",
-  "version": "2.1.1",
-  "description": "מתקן הקלדה שגויה בזמן אמת.",
-  "permissions": ["activeTab",  "storage"],
+  "version": "2.2.0",
+  "description": "מתקן הקלדה שגויה בזמן אמת עם בועת זכוכית, אישור ב-Tab וסינון חכם.",
+  "permissions": ["activeTab", "storage"],
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",

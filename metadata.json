@@ -1,0 +1,7 @@
+{
+  "name": "Smart Keyboard Translator (מתרגם מקלדת חכם)",
+  "description": "Smart Chrome extension and web application for real-time Hebrew-English keyboard typing correction and conversion.",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

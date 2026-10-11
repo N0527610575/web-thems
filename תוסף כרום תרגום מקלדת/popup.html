@@ -3,23 +3,134 @@
 <head>
   <meta charset="UTF-8">
   <style>
-    body { font-family: system-ui, -apple-system, sans-serif; width: 250px; padding: 16px; margin: 0; background: #f8fafc; color: #1e293b; direction: rtl; }
-    h2 { font-size: 16px; margin: 0 0 6px 0; color: #0f172a; display: flex; align-items: center; gap: 6px; }
-    .status { display: inline-block; background: #dcfce7; color: #15803d; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 10px; margin-bottom: 12px; }
-    p { font-size: 12px; color: #64748b; margin-bottom: 14px; line-height: 1.5; }
-    .box { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px; margin-bottom: 12px; font-size: 11px; }
-    button { width: 100%; padding: 10px; background: #2563eb; color: #fff; border: none; border-radius: 8px; font-size: 13px; font-weight: bold; cursor: pointer; transition: background 0.2s; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      width: 270px;
+      padding: 16px;
+      margin: 0;
+      background: #0f172a;
+      color: #f8fafc;
+      direction: rtl;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 15px;
+      margin: 0;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 12px;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    .dot {
+      width: 6px;
+      height: 6px;
+      background: #34d399;
+      border-radius: 50%;
+    }
+    p {
+      font-size: 12px;
+      color: #94a3b8;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+    .features {
+      background: rgba(30, 41, 59, 0.7);
+      border: 1px solid rgba(51, 65, 85, 0.8);
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 14px;
+      font-size: 11px;
+      color: #cbd5e1;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .feature-icon {
+      color: #60a5fa;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #2563eb;
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
     button:hover { background: #1d4ed8; }
+    button:active { transform: scale(0.98); }
+    .footer {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 10px;
+      color: #64748b;
+    }
+    .feedback {
+      display: none;
+      margin-top: 8px;
+      font-size: 11px;
+      color: #34d399;
+      text-align: center;
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
-  <h2>🌐 מתרגם מקלדת</h2>
-  <span class="status">● פעיל בזמן אמת</span>
-  <p>הקלידו בכל שדה באתרי אינטרנט. כשתהיה שגיאת הקלדה, תקפוץ מעליכם בועת זכוכית שקופה לאישור מהיר!</p>
-  <div class="box">
-    💡 <strong>טיפ:</strong> אפשר לאשר הצעות מיד בלחיצה על מקש <b>Tab</b> במקלדת, או ללחוץ על הכפתור הכחול הצף בשדה להמרה מלאה.
+  <div class="header">
+    <h2>🌐 מתרגם מקלדת</h2>
+    <span class="status"><span class="dot"></span>פעיל</span>
   </div>
+  
+  <p>מתקן אוטומטית שגיאות הקלדה מעברית לאנגלית ובחזרה בכל שדות הטקסט ברשת.</p>
+
+  <div class="features">
+    <div class="feature-item">
+      <span class="feature-icon">✨</span>
+      <span>בועת זכוכית שקופה להצעה מהירה</span>
+    </div>
+    <div class="feature-item">
+      <span class="feature-icon">⌨️</span>
+      <span>אישור מיידי בלחיצה על מקש <b>Tab</b></span>
+    </div>
+    <div class="feature-item">
+      <span class="feature-icon">🛡️</span>
+      <span>סינון מילים חכם (ללא הטרדות באנגלית)</span>
+    </div>
+  </div>
+
   <button id="trigger-btn">✨ תרגם עכשיו את השדה הפעיל</button>
+  <div id="feedback" class="feedback">השדה תורגם בהצלחה! ✓</div>
+
+  <div class="footer">גרסה משודרגת v2.2.0</div>
   <script src="popup.js"></script>
 </body>
 </html>
